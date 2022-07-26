@@ -5,11 +5,18 @@ Light green: #7ed56f
 Medium green: #55c57a
 Dark green: #28b485
 
+Greys:
+
+#f7f7f7 (not used yet)
+#777
+
 */
 
 @import "./debug-styles.css";
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,12 +25,15 @@ Dark green: #28b485
 body {
   font: 400 16px/1.7 Lato, sans-serif;
   color: #777;
-  padding: 25px;
+  padding: 32px;
 }
 
 /* #region header */
 
+/* == Site header == */
+
 .header {
+  position: relative;
   height: 95vh;
   background-image:
     linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)),
@@ -31,6 +41,149 @@ body {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.logo-box {
+  position: absolute;
+  top: 48px;
+  left: 48px;
+}
+
+.logo-img {
+  height: 32px;
+}
+
+.header-text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading-primary {
+  text-transform: uppercase;
+  color: #fff;
+  /* Fix shaky animation */
+  backface-visibility: hidden;
+  margin-bottom: 48px;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 62px;
+  font-weight: 400;
+  letter-spacing: 32px;
+  animation: move-in-right 2s ease-in;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 16px;
+  animation: move-in-left 2s ease-in;
+}
+
+/* == Animations == */
+
+@keyframes move-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes move-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes move-in-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* == Buttons == */
+
+.btn:link,
+.btn:visited {
+  --btn-bdrs: 100px;
+  position: relative;
+  border-radius: var(--btn-bdrs);
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 16px 24px;
+  transition: all 0.2s;
+}
+
+.btn-white {
+  color: #777;
+  background-color: #fff;
+}
+
+.btn-animated {
+  animation: move-in-bottom 0.6s ease-out 0.75s backwards;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px  rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px  rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: var(--btn-bdrs);
+  transition: all 0.4s;
+  z-index: -10;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scale(1.4, 1.6);
+  opacity: 0;
 }
 
 /* #endregion */
