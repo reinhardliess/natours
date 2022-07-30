@@ -2,13 +2,13 @@
   &:link,
   &:visited {
     --btn-bdrs: 10rem;
-    position: relative;
     border-radius: var(--btn-bdrs);
+    position: relative;
     text-decoration: none;
     text-transform: uppercase;
+    transition: all 0.2s;
     display: inline-block;
     padding: 1.6rem 3.2rem;
-    transition: all 0.2s;
   }
 
   &::after {
