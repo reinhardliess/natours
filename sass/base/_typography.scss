@@ -3,3 +3,24 @@ body {
   color: $color-grey-dark;
   padding: 3.2rem;
 }
+
+.heading-secondary {
+  font-size: 3.6rem;
+  font-weight: 700;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  margin-bottom: 3.2rem
+}

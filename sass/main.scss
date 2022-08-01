@@ -3,7 +3,7 @@
 @import "abstracts/variables";
 
 @import "base/animations";
-@import "base/debug-styles";
+// @import "base/debug-styles";
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
@@ -12,5 +12,6 @@
 
 @import "layout/header";
 @import "layout/grid";
+@import "layout/composition";
 
 @import "pages/home";

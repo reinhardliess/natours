@@ -1,0 +1,42 @@
+.composition {
+  position: relative;
+
+  &__photo {
+    position: absolute;
+    width: 55%;
+    border-radius: 2px;
+    box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.08);
+    transition: all 0.2s;
+    z-index: 10;
+
+    &--p1 {
+      top: -1rem;
+      left: 1rem;
+    }
+
+    &--p2 {
+      top: 4rem;
+      right: 0;
+    }
+
+    &--p3 {
+      top: 12rem;
+      left: 12rem;
+    }
+
+    &:hover {
+      box-shadow: 0 1.8rem 3.6rem rgba($color-black, 0.2);
+      transform: scale(1.05) translateY(-0.5rem);
+      z-index: 20;
+      outline: 1rem solid $color-primary;
+      outline-offset: 1.2rem
+      ;
+    }
+  }
+
+  // Scale down images that aren't hovered
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.95);
+  }
+
+}
