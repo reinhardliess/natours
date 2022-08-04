@@ -49,27 +49,27 @@
   }
 }
 
-.btn-green {
+.btn-underline {
   &:link,
   &:visited {
     display: inline-block;
     text-decoration: none;
-    color: $color-primary;
+    color: map-get($color-primary, 'base');
     padding: 0.4rem;
-    border-bottom: 2px solid $color-primary;
+    border-bottom: 2px solid currentColor;
     transition: all 0.2s;
   }
 
   &:hover {
     transform: translateY(-0.2rem);
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.07);
     color: $color-white;
-    background-color: $color-primary;
+    background-color: map-get($color-primary, 'base');
   }
 
   &:active {
     transform: translateY(0);
-    box-shadow: 0 0.5rem 1rem  rgba($color-black, 0.2);
+    box-shadow: 0 0.5rem 1rem  rgba($color-black, 0.075);
   }
 
 }

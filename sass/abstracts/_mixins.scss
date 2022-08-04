@@ -5,3 +5,21 @@
     clear: both;
   }
 }
+
+@mixin bg-gradient($direction, $color, $opacity, $image: null) {
+  @if $image {
+    background-image:
+      linear-gradient($direction,
+        rgba(map-get($color, 'light'), $opacity),
+        rgba(map-get($color, 'dark'), $opacity)),
+        url(#{$image});
+    background-size: cover;
+    background-position: top;
+  } @else {
+    background-image:
+    linear-gradient($direction,
+      rgba(map-get($color, 'light'), $opacity),
+      rgba(map-get($color, 'dark'), $opacity))
+  }
+
+}
