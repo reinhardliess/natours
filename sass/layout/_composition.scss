@@ -28,7 +28,7 @@
       box-shadow: 0 1.8rem 3.6rem rgba($color-black, 0.2);
       transform: scale(1.05) translateY(-0.5rem);
       z-index: 20;
-      outline: 1rem solid map-get($color-primary, 'base');
+      outline: 1rem solid $color-primary-base;
       outline-offset: 1.2rem;
     }
   }
