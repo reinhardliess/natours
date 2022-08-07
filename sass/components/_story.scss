@@ -1,0 +1,62 @@
+.story {
+  $shape-move-left: 2.4rem;
+  $skew-angle: -12deg;
+  $image-x-offset: -3.2rem;
+
+  background-color: $color-white;
+  width: 75%;
+  margin: 0 auto;
+  padding: 4.8rem 3.2rem;
+  padding-left: 3.2rem + $shape-move-left;
+  transform: skew($skew-angle);
+  box-shadow: 0 1.6rem 3.6rem rgba(0, 0, 0, 0.1);
+
+  &__shape {
+    position: relative;
+    width: 16rem;
+    height: 16rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX($shape-move-left * -1) skew($skew-angle * -1);
+    // NB: fixing a vertical fine line bug in Chromium with filter + shape
+    // border-radius: 100%;
+    overflow: hidden;
+  }
+
+  &__image {
+    height: 100%;
+    transform: translateX($image-x-offset) scale(1.20);
+    transition: all 0.3s;
+    backface-visibility: hidden;
+  }
+
+  &__caption {
+    position: absolute;
+    color: $color-white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    opacity: 0;
+    transition: all 0.4s;
+    backface-visibility: hidden;
+  }
+
+  &__text {
+    transform: skew($skew-angle * -1);
+  }
+
+  &:hover &__image {
+    filter: blur(2px) brightness(80%);
+    transform: translateX($image-x-offset) scale(1);
+  }
+
+  &:hover &__caption {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+}
