@@ -16,8 +16,10 @@ $color-tertiary: (
 );
 
 $color-primary-base: map-get($color-primary, 'base');
+$color-secondary-dark: map-get($color-secondary, 'dark');
 $color-grey-light: #f7f7f7;
-$color-grey-dark: #777;
+$color-grey-dark-1: #777;
+$color-grey-dark-2: #333;
 $color-white: #fff;
 $color-black: #000;
 

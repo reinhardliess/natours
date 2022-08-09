@@ -1,13 +1,13 @@
 body {
   font: 400 1.6rem/1.7 Lato, sans-serif;
-  color: $color-grey-dark;
+  color: $color-grey-dark-1;
   padding: 3.2rem;
 }
 
 .heading-secondary {
   font-size: 3.6rem;
   font-weight: 700;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
   @include bg-gradient(to right, $color-primary, 0.8);
   color: transparent;
@@ -24,3 +24,4 @@ body {
 .paragraph {
   margin-bottom: 3.2rem
 }
+

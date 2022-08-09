@@ -20,9 +20,7 @@
 }
 
 .section-tours {
-  // background-color: lightblue;
   padding: 25.6rem 0 16.2rem;
-  // padding: 25.6rem 0;
   margin-top: -10rem;
 }
 
@@ -31,3 +29,19 @@
   padding: 12.8rem 0;
 }
 
+.section-booking {
+  padding: 12.8rem 0;
+  @include bg-gradient(to bottom right, $color-primary, 0.8);
+  // height: 40rem;
+}
+
+.booking {
+  padding: 3.2rem 4.8rem;
+  background-image: linear-gradient(
+    105deg,
+    rgba($color-white, .9) 0%,
+    rgba($color-white, .9) 50%,
+    transparent 50%) ,
+    url(../../img/nat-10.jpg);
+  background-size: cover;
+}
