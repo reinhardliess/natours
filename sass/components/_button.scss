@@ -36,7 +36,9 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem  rgba($color-black, 0.2);
   }
@@ -79,8 +81,14 @@
   }
 
   &:active {
+    outline: none;
     transform: translateY(0);
     box-shadow: 0 0.5rem 1rem  rgba($color-black, 0.075);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 1.2rem 2.4rem  rgba($color-black, 0.2);
   }
 
 }
