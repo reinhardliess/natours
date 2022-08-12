@@ -6,6 +6,19 @@
   }
 }
 
+@mixin circle($diameter: null) {
+  width: $diameter;
+  height: $diameter;
+  border-radius: 50%;
+}
+
+@mixin center-absolute($offset-left: -50%, $offset-right: -50%) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate($offset-left, $offset-right);
+}
+
 @mixin bg-gradient($direction, $color, $opacity, $image: null) {
   @if $image {
     background-image:

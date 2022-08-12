@@ -152,7 +152,9 @@
     transform: rotateY(0deg);
   }
 
-
+  &__side--back:focus-within {
+    transform: rotateY(0deg);
+  }
 
 }
 

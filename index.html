@@ -12,6 +12,36 @@
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
+    <div class="navigation">
+      <input
+        type="checkbox"
+        name="navigation-toggle"
+        id="navigation-toggle"
+        class="navigation__checkbox"
+      />
+      <label for="navigation-toggle" class="navigation__button"> &nbsp; </label>
+      <div class="navigation__background">&nbsp;</div>
+      <nav class="navigation__nav" aria-label="Main navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="" class="navigation__link"><span>01</span>About Natours</a>
+          </li>
+          <li class="navigation__item">
+            <a href="" class="navigation__link"><span>02</span>Your Benefits</a>
+          </li>
+          <li class="navigation__item">
+            <a href="" class="navigation__link"><span>03</span>Popular Tours</a>
+          </li>
+          <li class="navigation__item">
+            <a href="" class="navigation__link"><span>04</span>Stories</a>
+          </li>
+          <li class="navigation__item">
+            <a href="" class="navigation__link"><span>05</span>Book Now</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
     <header class="header">
       <div class="header__logo-box">
         <img
@@ -409,7 +439,7 @@
       </div>
       <div class="row">
         <div class="col-1-of-2">
-          <nav class="footer__navigation">
+          <nav class="footer__navigation" aria-label="Site footer navigation">
             <ul class="footer__list">
               <li class="footer__list-item">
                 <a href="" class="footer__link">Company</a>
@@ -432,10 +462,18 @@
         <div class="col-1-of-2">
           <p class="footer__copyright">
             Built by
-            <a href="https://codingheroes.io" class="footer__link" target="_blank" rel="noopener">Jonas Schmedtmann</a>
+            <a
+              href="https://codingheroes.io"
+              class="footer__link"
+              target="_blank"
+              rel="noopener"
+              >Jonas Schmedtmann</a
+            >
             for his online course
             <a
-              href="https://www.udemy.com/course/advanced-css-and-sass/" target="_blank" rel="noopener"
+              href="https://www.udemy.com/course/advanced-css-and-sass/"
+              target="_blank"
+              rel="noopener"
               class="footer__link"
             >
               Advanced CSS and Sass </a
@@ -478,5 +516,6 @@
         <div class="col-3-of-4">col 3 of 4</div>
       </div>
     </section> -->
+
   </body>
 </html>
