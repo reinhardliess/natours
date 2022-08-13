@@ -2,7 +2,7 @@
 
   background-color: $color-black;
   padding: 10rem;
-  color: $color-grey-light;
+  color: $color-grey-light-1;
   font-size: 1.4rem;
 
   &__logo-box {
@@ -35,7 +35,7 @@
   &__link {
     &:link,
     &:visited {
-      color: $color-grey-light;
+      color: $color-grey-light-1;
       text-decoration: none;
       display: inline-block;
       transition: all 0.2s;

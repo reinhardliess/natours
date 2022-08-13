@@ -16,9 +16,9 @@
     position: fixed;
     top: 6rem;
     right: 6rem;
-    // background-color: lightblue;
     background-color: $color-white;
     z-index: 200;
+    box-shadow: 0 1.6rem 3.6rem rgba($color-black, 0.075);
   }
 
   &__button:hover &__icon::before {
@@ -57,13 +57,10 @@
     &::after {
       top: 0.8rem;
     }
-
-
   }
 
   &__checkbox {
     display: none;
-    // opacity: 0;
   }
 
   &__checkbox:checked + &__button &__icon {
