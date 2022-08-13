@@ -2,6 +2,7 @@
   &,
   &:link,
   &:visited {
+    // use CSS property instead of Sass variable because of scope
     --btn-bdrs: 10rem;
     border-radius: var(--btn-bdrs);
     position: relative;
