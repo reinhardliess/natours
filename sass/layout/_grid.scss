@@ -5,9 +5,22 @@
 
   @include clearfix;
 
+
+  @include respond(tablet-portrait) {
+    max-width: $grid-width-tablet;
+    padding: 0 2.4rem;
+  }
+
+
   // &:not(:last-child) {
   &:not(:last-of-type) {
     margin-bottom: $gutter-vertical;
+
+
+    @include respond(tablet-portrait) {
+      margin-bottom: $gutter-vertical-small;
+    }
+
   }
 
   [class^=col-] {
@@ -15,7 +28,20 @@
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+
+      @include respond(tablet-portrait) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+
     }
+
+    @include respond(tablet-portrait) {
+      width: 100% !important;
+    }
+
+
   }
 
   .col-1-of-2 {

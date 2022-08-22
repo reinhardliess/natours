@@ -45,6 +45,9 @@
   900 - 1200px:   Tablet landscape
   [1200 - 1800px] is where our normal styles apply
   1800px + :      Big desktop
+
+  ORDER: Base + typography > general layout + grid > page layout > components
+
 */
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
@@ -66,7 +69,7 @@
   }
 
   @if $breakpoint == big-desktop {
-    @media screen and (max-width: #{px-to-em(1800px)}) {
+    @media screen and (min-width: #{px-to-em(1800px)}) {
       @content;
     }
   }

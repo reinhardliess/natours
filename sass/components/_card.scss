@@ -127,6 +127,7 @@
 
   &__price {
     &-box {
+      margin-bottom: 8rem;
       color: $color-white;
       font-weight: 300;
     }
@@ -156,6 +157,56 @@
     transform: rotateY(0deg);
   }
 
+  @include respond(tablet-landscape) {
+    height: auto;
+
+    &__side {
+      position: relative;
+      height: auto;
+      border-radius: 4px;
+
+      &--back {
+        border-radius: 0 0 4px 4px;
+        padding: 4.8rem 3.2rem;
+        transform: rotateY(0deg);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    // #region back side elements
+    &__cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    &__price {
+      &-box {
+        margin-bottom: 3.2rem;
+      }
+
+
+      &-value {
+        font-size: 4.4rem;
+      }
+    }
+
+    // #endregion
+
+    &:hover &__side--front {
+      transform: rotateY(0deg);
+    }
+
+    &:hover &__side--back {
+      transform: rotateY(0deg);
+    }
+
+    &__side--back:focus-within {
+      transform: rotateY(0deg);
+    }
+  }
+
+
 }
-
-

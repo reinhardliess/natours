@@ -9,8 +9,27 @@
 html {
   /* 1 rem = 10px */
   font-size: calc-base-rem(10px);
+
+  @include respond(tablet-landscape) {
+    font-size: calc-base-rem(9px);
+  }
+
+  // this includes phones
+  @include respond(tablet-portrait) {
+    font-size: calc-base-rem(8px);
+  }
+
+  @include respond(big-desktop) {
+    font-size: calc-base-rem(12px);
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3.2rem;
+
+  @include respond(tablet-portrait) {
+    padding: 0;
+  }
+
 }

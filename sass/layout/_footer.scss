@@ -5,13 +5,40 @@
   color: $color-grey-light-1;
   font-size: 1.4rem;
 
+
+  @include respond(tablet-portrait) {
+    padding: 6.4rem 4.8rem;
+  }
+
+
   &__logo-box {
     text-align: center;
   }
 
   &__logo {
-    width: 15rem;
+    width: 16rem;
     height: auto;
+
+
+    @include respond(tablet-portrait) {
+      width: 12rem;
+    }
+
+
+    @include respond(phone) {
+      width: 9.8rem;
+    }
+
+
+  }
+
+  &__navigation {
+
+    @include respond(tablet-portrait) {
+      width: 100%;
+      text-align: center;
+    }
+
   }
 
   &__list {
@@ -56,5 +83,13 @@
     padding-top: 1.2rem;
     float: right;
     width: 90%;
+
+
+    @include respond(tablet-portrait) {
+      float: none;
+      width: 100%;
+    }
+
+
   }
 }

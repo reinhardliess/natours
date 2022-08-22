@@ -27,11 +27,21 @@
     transition: all .5s .2s;
     // Chrome border fix
     // border-bottom: thin solid rgba($color-black, 0.8);
+
+    @include respond(phone) {
+      display: block;
+    }
   }
 
   &__left {
     display: table-cell;
+    vertical-align: middle;
     width: math.div(100%, 3);
+
+    @include respond(phone) {
+      display: none;
+    }
+
   }
 
   &__image {
@@ -53,6 +63,12 @@
     column-gap: 3.2rem;
     column-rule: 1px solid $color-grey-light-2;
     hyphens: auto;
+
+
+    @include respond(tablet-portrait) {
+      column-count: 1;
+    }
+
   }
 
   // Open/close states

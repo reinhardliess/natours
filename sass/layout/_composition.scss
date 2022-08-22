@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .composition {
   position: relative;
 
@@ -9,19 +11,31 @@
     transition: all 0.2s;
     z-index: 10;
 
+
+    @include respond(tablet-portrait) {
+      position: relative;
+      float: left;
+      width: math.div(100%, 3);
+    }
+
+
     &--p1 {
-      top: -1rem;
-      left: 1rem;
+      top: 0rem;
+      left: 0rem;
+      transform: scale(1.1);
     }
 
     &--p2 {
-      top: 4rem;
+      top: -1.2rem;
       right: 0;
+      transform: scale(1.2);
+      z-index: 20;
     }
 
     &--p3 {
-      top: 12rem;
-      left: 12rem;
+      top: 0.6rem;
+      left: 0rem;
+      transform: scale(1.1);
     }
 
     &:hover {

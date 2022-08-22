@@ -1,6 +1,11 @@
 .story {
   $shape-move-left: 2.4rem;
+  $shape-move-left-tablet: 3.2rem;
+  $shape-move-left-phone: 2rem;
+
   $skew-angle: -12deg;
+  $skew-angle-phone: 0deg;
+
   $image-x-offset: -3.2rem;
 
   background-color: $color-white;
@@ -10,6 +15,18 @@
   padding-left: 3.2rem + $shape-move-left;
   transform: skew($skew-angle);
   box-shadow: 0 1.6rem 3.6rem rgba(0, 0, 0, 0.1);
+
+  @include respond(tablet-portrait) {
+    padding-left: 3.2rem + $shape-move-left-tablet;
+    width: 100%;
+  }
+
+
+  @include respond(phone) {
+    padding-left: 3.2rem + $shape-move-left-phone;
+    transform: skew($skew-angle-phone);
+  }
+
 
   &__shape {
     position: relative;
@@ -22,6 +39,16 @@
     // NB: fixing a vertical fine line bug in Chromium with filter + shape
     // border-radius: 100%;
     overflow: hidden;
+
+
+    @include respond(tablet-portrait) {
+      transform: translateX($shape-move-left-tablet * -1) skew($skew-angle * -1);
+    }
+
+    @include respond(phone) {
+      transform: translateX($shape-move-left-phone * -1) skew($skew-angle-phone * -1);
+    }
+
   }
 
   &__image {
@@ -44,6 +71,12 @@
 
   &__text {
     transform: skew($skew-angle * -1);
+
+
+    @include respond(phone) {
+      transform: skew($skew-angle-phone * -1);
+    }
+
   }
 
   &:hover &__image {

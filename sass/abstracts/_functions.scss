@@ -24,3 +24,7 @@
 @function calc-base-rem($px-size) {
   @return math.div(math.div($px-size, 1px) * 100, 16) * 1%;
 }
+
+@function calc-navbutton-position($diameter) {
+  @return $diameter + ($diameter * 0.083);
+}

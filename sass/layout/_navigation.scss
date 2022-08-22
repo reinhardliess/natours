@@ -9,6 +9,13 @@
     z-index: 100;
     // easeInOutCubic
     transition: transform 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+
+    @include respond(tablet-portrait) {
+      @include circle(4rem);
+      top: 4.5rem;
+      right: 4.5rem;
+    }
   }
 
   &__button {
@@ -19,6 +26,12 @@
     background-color: $color-white;
     z-index: 200;
     box-shadow: 0 1.6rem 3.6rem rgba($color-black, 0.075);
+
+    @include respond(tablet-portrait) {
+      top: 4rem;
+      right: 4rem;
+    }
+
   }
 
   &__button:hover &__icon::before {
@@ -109,6 +122,7 @@
     list-style: none;
     @include center-absolute;
     text-align: center;
+    width: 85%;
   }
 
   &__link {
