@@ -20,22 +20,40 @@
 
 
     &--p1 {
-      top: 0rem;
       left: 0rem;
+      top: -2rem;
       transform: scale(1.1);
+
+
+      @include respond(tablet-portrait) {
+        top: 0;
+      }
+
     }
 
     &--p2 {
-      top: -1.2rem;
+      top: 2rem;
       right: 0;
       transform: scale(1.2);
       z-index: 20;
+
+      @include respond(tablet-portrait) {
+        top: -1rem;
+        // right: 1rem;
+      }
+
     }
 
     &--p3 {
-      top: 0.6rem;
-      left: 0rem;
+      top: 10rem;
+      left: 20%;
       transform: scale(1.1);
+
+      @include respond(tablet-portrait) {
+        top: 1rem;
+        left: 0;
+      }
+
     }
 
     &:hover {
