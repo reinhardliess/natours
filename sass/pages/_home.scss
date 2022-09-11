@@ -7,11 +7,12 @@
 
   @include respond(tablet-portrait) {
     padding: 19.2rem 0;
+
+    & .heading-secondary {
+      margin-top: 9.6rem;
+    }
   }
 
-  & .heading-secondary {
-    margin-top: 6.4rem;
-  }
 }
 
 .section-features {

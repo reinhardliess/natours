@@ -22,7 +22,7 @@
     &--p1 {
       left: 0rem;
       top: -2rem;
-      transform: scale(1.1);
+      // transform: scale(1.1);
 
 
       @include respond(tablet-portrait) {
@@ -34,7 +34,7 @@
     &--p2 {
       top: 2rem;
       right: 0;
-      transform: scale(1.2);
+      // transform: scale(1.2);
       z-index: 20;
 
       @include respond(tablet-portrait) {
@@ -47,7 +47,7 @@
     &--p3 {
       top: 10rem;
       left: 20%;
-      transform: scale(1.1);
+      // transform: scale(1.1);
 
       @include respond(tablet-portrait) {
         top: 1rem;

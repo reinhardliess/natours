@@ -1,8 +1,15 @@
 .header {
   position: relative;
   height: 95vh;
-  @include bg-gradient(to bottom right, $color-primary, 0.8, "../img/hero.jpg");
+  @include bg-gradient(to bottom right, $color-primary, 0.8, "../img/hero-small.jpg");
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @media
+    (min-resolution: 192dpi) and (min-width: 37.5em),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    (min-width: 125em) {
+      @include bg-gradient(to bottom right, $color-secondary, 0.8, "../img/hero.jpg");
+  }
 
   @include respond(tablet-portrait) {
     clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
