@@ -37,6 +37,24 @@
     @include respond(phone) {
       display: block;
     }
+
+    & .heading-secondary {
+
+      @include respond(tablet-landscape) {
+        font-size: 3.4rem;
+      }
+
+
+      @include respond(tablet-portrait) {
+        font-size: 2.2rem;
+      }
+
+
+      @include respond(phone) {
+        font-size: 2rem;
+      }
+
+    }
   }
 
   &__left {
